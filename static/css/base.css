@@ -1,0 +1,12 @@
+#title {
+  font-size: 2em; }
+
+  .mdl-layout .mdl-layout__drawer-button {
+    margin-top: 20px;
+    color: white;
+    background-color: transparent; }
+    .mdl-layout header .mdl-layout__header-row {
+      background: rgba(0, 0, 0, 0.8);
+      background: #F93D5C; }
+      .mdl-layout header .mdl-layout__header-row nav button {
+        color: white; }

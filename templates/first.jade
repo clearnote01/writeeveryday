@@ -1,0 +1,13 @@
+extends base
+block title 
+    title Welcome
+
+block pagestyle
+    link(rel="stylesheet",href="/static/css/first.css")
+
+block body
+    form(id="login", method="POST", action="login")
+        input(name="email", placeholder="Email") 
+        input(name="password", placeholder="Password", type="password")
+        button Submit
+

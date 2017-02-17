@@ -1,0 +1,37 @@
+// base.jade file
+!!! 
+html(lang="en")
+  head
+    block title
+      title Base
+    script(type='text/javascript').
+      if (foo) {
+         bar()
+      }
+    link(rel="stylesheet",href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet",href="/static/css/base.css")
+    link(rel="stylesheet",href="/static/css/material.min.css")
+    script(defer src="/static/js/material.min.js")
+    block pagestyle
+  body 
+    div.demo-layout-transparent.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+        header.mdl-layout__header.mdl-layout__header--transparent
+            div.mdl-layout__header-row 
+            div.mdl-layout__header-row
+                span.mdl-layout-title 300words
+                div.mdl-layout-spacer
+                nav.mdl-navigation
+                    button.mdl-button.mdl-js-button.mdl-button--raised Start writing!
+        div.mdl-layout__drawer
+            span.mdl-layout-title Title
+            nav.mdl-navigation
+                a.mdl-navigation__link(href="#") About Us
+                a.mdl-navigation__link(href="#")   Why us?
+                a.mdl-navigation__link(href="#")   Help
+            div.mdl-layout-spacer
+            nav.mdl-navigation
+                a.mdl-navigation__link(href="#")   Logout
+        block body
+        footer
+            h1 Life is a bitch
+

@@ -1,0 +1,10 @@
+main {
+  min-height: 1800px; }
+  main .mdl-grid .all-contents {
+    margin-top: 100px; }
+    main .mdl-grid .all-contents #first-card {
+      width: 100%; }
+      main .mdl-grid .all-contents #first-card .my-card__title {
+        background: url('/static/images/writeeveryday.jpg') no-repeat center center fixed;
+        background-size: 100% 100%;
+        height: 200px; }
