@@ -7,16 +7,13 @@ main {
             .mdl-card {
                 width: 100%;
                 .mdl-card__title {
-                    //margin: auto;
-                    .mdl-card__title-text {
-                        font-family: 'Roboto', sans-serif;
-                        font-weight: 300;
-                    }
+                    @extend .mdl-typography--caption;
                 }
                 .mdl-card__supporting-text {
                     p {
                         font-family: 'Roboto', sans-serif;
-                        font-weight: 300;
+                        font-weight: 400;
+                        font-size: 1.2em;
                     }
                 }
             }

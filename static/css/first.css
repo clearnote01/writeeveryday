@@ -4,9 +4,7 @@ main {
     margin-top: 100px; }
     main .mdl-grid .all-contents .mdl-card {
       width: 100%; }
-      main .mdl-grid .all-contents .mdl-card .mdl-card__title .mdl-card__title-text {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300; }
       main .mdl-grid .all-contents .mdl-card .mdl-card__supporting-text p {
         font-family: 'Roboto', sans-serif;
-        font-weight: 300; }
+        font-weight: 400;
+        font-size: 1.2em; }
