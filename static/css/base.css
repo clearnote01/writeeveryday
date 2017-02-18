@@ -1,13 +1,17 @@
-#title {
-  font-size: 2em; }
+body {
+  background-color: lightgray; }
 
-  .mdl-layout {
-    margin: 0px; }
-    .mdl-layout .mdl-layout__drawer-button {
-      margin-top: 20px; }
-      .mdl-layout header {
-        position: absolute; }
-        .mdl-layout header .mdl-layout__header-row {
-          background: #607D8B; }
-          .mdl-layout header .mdl-layout__header-row nav button {
-            color: white; }
+  #title {
+    font-size: 2em; }
+
+    .mdl-layout {
+      margin: 0px;
+      overflow-y: hidden; }
+      .mdl-layout .mdl-layout__drawer-button {
+        margin-top: 20px; }
+        .mdl-layout header {
+          margin-bottom: 40px; }
+          .mdl-layout header .mdl-layout__header-row {
+            background: #607D8B; }
+            .mdl-layout header .mdl-layout__header-row nav button {
+              color: white; }

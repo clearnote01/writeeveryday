@@ -1,15 +1,19 @@
+body {
+    background-color: lightgray;
+}
 #title {
     font-size: 2em;
 }
 
 .mdl-layout {
     margin: 0px;
+    overflow-y: hidden;
     .mdl-layout__drawer-button {
         margin-top: 20px;
         //color: white;
     }
     header {
-        position: absolute;
+        margin-bottom: 40px;
         .mdl-layout__header-row {
             //background: rgba(0.3,0.4,0.3,0.8);
             //background: gray;
