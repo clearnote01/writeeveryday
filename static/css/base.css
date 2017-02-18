@@ -2,9 +2,7 @@
   font-size: 2em; }
 
   .mdl-layout .mdl-layout__drawer-button {
-    margin-top: 20px;
-    color: white;
-    background-color: transparent; }
+    margin-top: 20px; }
     .mdl-layout header .mdl-layout__header-row {
       background: #607D8B; }
       .mdl-layout header .mdl-layout__header-row nav button {

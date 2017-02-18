@@ -2,13 +2,13 @@
 !!! 
 html(lang="en")
   head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
+    meta(name="mobile-web-app-capable",content="yes")
     block title
       title Base
-    script(type='text/javascript').
-      if (foo) {
-         bar()
-      }
-    //-link(rel="stylesheet",href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet",href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet",href="/static/css/base.css")
     link(rel="stylesheet",href="/static/css/material.min.css")
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700", type="text/css")
@@ -20,12 +20,11 @@ html(lang="en")
   body 
     div.demo-layout-transparent.mdl-layout.mdl-js-layout
         header.mdl-layout__header.mdl-layout__header--transparent
-            div.mdl-layout__header-row 
             div.mdl-layout__header-row
                 span.mdl-layout-title 300words
                 div.mdl-layout-spacer
                 nav.mdl-navigation
-                    button.mdl-button.mdl-js-button.mdl-button--raised Start writing!
+                    button.mdl-button.mdl-js-button.mdl-button--raised Join now
         div.mdl-layout__drawer
             span.mdl-layout-title Title
             nav.mdl-navigation
