@@ -1,9 +1,23 @@
 main { 
+    margin: 0px;
     background-color: lightgray;
     // here somethings
     min-height: 1800px;
     .mdl-grid {
+                margin: 0px;
+                padding: 0px;
         .all-contents {
+                margin: 0px;
+                padding: 0px;
+            #test {
+                padding-top: 50px;
+                margin: 0px;
+                background-color: white;
+                p {
+                    width: 100%;
+                    padding: 0px;
+                }
+            }
             .mdl-card {
                 width: 100%;
                 .mdl-card__title {

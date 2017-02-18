@@ -3,11 +3,13 @@
 }
 
 .mdl-layout {
+    margin: 0px;
     .mdl-layout__drawer-button {
         margin-top: 20px;
         //color: white;
     }
     header {
+        position: absolute;
         .mdl-layout__header-row {
             //background: rgba(0.3,0.4,0.3,0.8);
             //background: gray;
