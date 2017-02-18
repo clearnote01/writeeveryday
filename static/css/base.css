@@ -6,7 +6,6 @@
     color: white;
     background-color: transparent; }
     .mdl-layout header .mdl-layout__header-row {
-      background: rgba(0, 0, 0, 0.8);
-      background: #F93D5C; }
+      background: #607D8B; }
       .mdl-layout header .mdl-layout__header-row nav button {
         color: white; }

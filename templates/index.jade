@@ -1,20 +1,23 @@
+// This page will be the first to be seen when you login/signin or are a return user
+// Contains signup/login and app info
 extends base
 
 block pagestyle
-    link(rel="stylesheet", href="/static/css/first.css")
+    link(rel="stylesheet", href="/static/css/index.css")
 block title
-    title Index
+    title Welcome back
 
 block body
     main.mdl-layout__content
-        div.mdl-grid
-            div.mdl-cell.mdl-cell--1-col
-            div.all-contents.mdl-cell.mdl-cell--10-col
-                div#first-card.mdl-card.mdl-shadow--2dp
-                    div.my-card__title.mdl-card__title
-                        h2.mdl-card__title-text Welcome to 300words
-                    div.mdl-card__supporting-text
-                        Lorem Lorem Lorem Lorem
-                        Lorem Lore   Lore    Lorem
-                        LOre     Lorem Lore  Lorem
-            div.mdl-cell.mdl-cell--1-col
+        h1 Welcome back poor user!
+        //-div.mdl-grid
+            //-div.mdl-cell.mdl-cell--1-col
+            //-div.all-contents.mdl-cell.mdl-cell--10-col
+                //-div#first-card.mdl-card.mdl-shadow--2dp
+                    //-div.my-card__title.mdl-card__title
+                        //-h2.mdl-card__title-text Welcome to 300words
+                    //-div.mdl-card__supporting-text
+                        //-Lorem Lorem Lorem Lorem
+                        //-Lorem Lore   Lore    Lorem
+                        //-LOre     Lorem Lore  Lorem
+            //-div.mdl-cell.mdl-cell--1-col
