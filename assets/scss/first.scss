@@ -1,13 +1,14 @@
 main { 
-    margin: 0px;
     background-color: lightgray;
     // here somethings
     min-height: 1800px;
     .mdl-grid {
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+            .all-contents {
                 margin: 0px;
-                padding: 0px;
-        .all-contents {
-                margin: 0px;
+                margin-top: 80px;
                 padding: 0px;
             #test {
                 padding-top: 50px;
@@ -33,11 +34,11 @@ main {
                 }
             }
             #first-card {
-				background-color: #607D7B;
+                background-color: #607D7B;
                 .mdl-card__title {
                     margin: auto;
                     h2 {
-						color: white;
+                        color: white;
                     }
                     //margin: unset;
                     //background: url('/static/images/writeeveryday.jpg') no-repeat center;
