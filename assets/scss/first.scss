@@ -1,4 +1,5 @@
 main { 
+    background-color: lightgray;
     // here somethings
     min-height: 1800px;
     .mdl-grid {
@@ -7,7 +8,8 @@ main {
             .mdl-card {
                 width: 100%;
                 .mdl-card__title {
-                    @extend .mdl-typography--caption;
+                    h3 {
+                    }
                 }
                 .mdl-card__supporting-text {
                     p {
@@ -18,7 +20,12 @@ main {
                 }
             }
             #first-card {
-                .my-card__title {
+				background-color: #607D7B;
+                .mdl-card__title {
+                    margin: auto;
+                    h2 {
+						color: white;
+                    }
                     //margin: unset;
                     //background: url('/static/images/writeeveryday.jpg') no-repeat center;
                     //background-size: contain;
