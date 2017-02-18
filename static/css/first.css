@@ -1,5 +1,4 @@
 main {
-  background-color: lightgray;
   min-height: 1800px; }
   main .mdl-grid {
     margin: 0px;
@@ -7,7 +6,6 @@ main {
     max-width: 100%; }
     main .mdl-grid .all-contents {
       margin: 0px;
-      margin-top: 80px;
       padding: 0px; }
       main .mdl-grid .all-contents #test {
         padding-top: 50px;
