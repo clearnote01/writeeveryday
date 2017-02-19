@@ -19,8 +19,8 @@ html(lang="en")
     script(src="/static/js/base.js")
     block pagestyle
   body(onload="bodyLoad()")
-    div.mdl-layout.mdl-js-layout.mdl-layout__content
-        header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header-fixed
+    div.mdl-layout.mdl-js-layout
+        header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header--scroll
             div.mdl-layout__header-row
                 a(href="/").mdl-navigation__link
                     span.mdl-layout-title 300words
@@ -38,7 +38,7 @@ html(lang="en")
             nav.mdl-navigation
                 a.mdl-navigation__link(href="#")   Logout
         
-        main
+        main.mdl-layout__content
             div#myLoader
                 div.mdl-card
                     div.mdl-grid
