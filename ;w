@@ -1,4 +1,5 @@
 body, html {
+    background-color: lightgray;
     height: 100%;
 }
 #title {
@@ -9,11 +10,27 @@ body, html {
     display: none;
 }
 
+#myLoader {
+    .mdl-card {
+        width: 100%;
+        height: 100%;
+        .mdl-grid {
+            height: 100%;
+            .mdl-cell {
+                align-self: center;
+            }
+        }
+    }
+}
 
-div.mdl-layout {
+.mdl-layout {
+    border: 10px solid green;
     height: 100%;
+    margin: 0px;
+    overflow-y: hidden;
     .mdl-layout__drawer-button {
         margin-top: 20px;
+        //color: white;
     }
     header {
         margin-bottom: 40px;
@@ -37,23 +54,7 @@ div.mdl-layout {
     }
     main {
         height: 100%;
-        #myLoader {
-            height: 100%;
-            .mdl-card {
-                width: 100%;
-                height: 100%;
-                .mdl-grid {
-                    height: 100%;
-                    .mdl-cell {
-                        align-self: center;
-                    }
-                }
-            }
-        }
-        #thePage {
-            height: 100%;
-            width: 100%;
-        }
+        border: 10px solid red;
         footer {
             // here somethings
             background: #607D7B;

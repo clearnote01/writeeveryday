@@ -1,28 +1,26 @@
-main {
-  min-height: 1800px; }
-  main .mdl-grid {
+.mdl-grid {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%; }
+  .mdl-grid .all-contents {
     margin: 0px;
-    padding: 0px;
-    max-width: 100%; }
-    main .mdl-grid .all-contents {
+    padding: 0px; }
+    .mdl-grid .all-contents #test {
+      padding-top: 50px;
       margin: 0px;
-      padding: 0px; }
-      main .mdl-grid .all-contents #test {
-        padding-top: 50px;
-        margin: 0px;
-        background-color: white; }
-        main .mdl-grid .all-contents #test p {
-          width: 100%;
-          padding: 0px; }
-      main .mdl-grid .all-contents .mdl-card {
-        width: 100%; }
-        main .mdl-grid .all-contents .mdl-card .mdl-card__supporting-text p {
-          font-family: 'Roboto', sans-serif;
-          font-weight: 400;
-          font-size: 1.2em; }
-      main .mdl-grid .all-contents #first-card {
-        background-color: #607D7B; }
-        main .mdl-grid .all-contents #first-card .mdl-card__title {
-          margin: auto; }
-          main .mdl-grid .all-contents #first-card .mdl-card__title h2 {
-            color: white; }
+      background-color: white; }
+      .mdl-grid .all-contents #test p {
+        width: 100%;
+        padding: 0px; }
+    .mdl-grid .all-contents .mdl-card {
+      width: 100%; }
+      .mdl-grid .all-contents .mdl-card .mdl-card__supporting-text p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.2em; }
+    .mdl-grid .all-contents #first-card {
+      background-color: #607D7B; }
+      .mdl-grid .all-contents #first-card .mdl-card__title {
+        margin: auto; }
+        .mdl-grid .all-contents #first-card .mdl-card__title h2 {
+          color: white; }

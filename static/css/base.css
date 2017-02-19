@@ -1,17 +1,35 @@
-body {
-  background-color: lightgray; }
+body, html {
+  height: 100%; }
 
   #title {
     font-size: 2em; }
 
-    .mdl-layout {
-      margin: 0px;
-      overflow-y: hidden; }
-      .mdl-layout .mdl-layout__drawer-button {
-        margin-top: 20px; }
-        .mdl-layout header {
-          margin-bottom: 40px; }
-          .mdl-layout header .mdl-layout__header-row {
-            background: #607D8B; }
-            .mdl-layout header .mdl-layout__header-row nav button {
-              color: white; }
+    #thePage {
+      display: none; }
+
+      div.mdl-layout {
+        height: 100%; }
+        div.mdl-layout .mdl-layout__drawer-button {
+          margin-top: 20px; }
+          div.mdl-layout header {
+            margin-bottom: 40px; }
+            div.mdl-layout header .mdl-layout__header-row {
+              background: #607D7B; }
+              div.mdl-layout header .mdl-layout__header-row nav button {
+                color: white; }
+        div.mdl-layout main {
+          height: 100%; }
+          div.mdl-layout main #myLoader {
+            height: 100%; }
+            div.mdl-layout main #myLoader .mdl-card {
+              width: 100%;
+              height: 100%; }
+              div.mdl-layout main #myLoader .mdl-card .mdl-grid {
+                height: 100%; }
+                div.mdl-layout main #myLoader .mdl-card .mdl-grid .mdl-cell {
+                  align-self: center; }
+          div.mdl-layout main #thePage {
+            height: 100%;
+            width: 100%; }
+            div.mdl-layout main footer {
+              background: #607D7B; }
