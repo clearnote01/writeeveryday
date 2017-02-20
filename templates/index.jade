@@ -4,20 +4,27 @@ extends base
 
 block pagestyle
     link(rel="stylesheet", href="/static/css/index.css")
+
+block javascript
+    script(src="/static/js/index.js")
+
 block title
     title Welcome back
 
+block nav
+    a.mdl-navigation__link(href="/logout")
+        button.mdl-button.mdl-button.mdl-js-button.mdl-button--raised Logout
+
+
 block body
     div.mdl-grid
-        h1 Welcome back poor user!
-    //-div.mdl-grid
-        //-div.mdl-cell.mdl-cell--1-col
-        //-div.all-contents.mdl-cell.mdl-cell--10-col
-            //-div#first-card.mdl-card.mdl-shadow--2dp
-                //-div.my-card__title.mdl-card__title
-                    //-h2.mdl-card__title-text Welcome to 300words
-                //-div.mdl-card__supporting-text
-                    //-Lorem Lorem Lorem Lorem
-                    //-Lorem Lore   Lore    Lorem
-                    //-LOre     Lorem Lore  Lorem
-        //-div.mdl-cell.mdl-cell--1-col
+        div.mdl-layout-spacer.mdl-cell--hide-phone
+        div.mdl-cell.mdl-cell--8-col.mdl-cell--12-col-phone.all-contents.mdl-shadow--2dp
+            div.mdl-textfield.mdl-js-textfield.mdl-shadow--1dp
+                span#noOfDays Day 1
+                span#noOfWords 10 words
+                hr
+                textarea.mdl-textfield__input(type="text",id="sample5")
+                //-label.mdl-textfield__label(for="sample5") Write Stuffs
+            h5 Welcome back {{ g.user.username }}
+        div.mdl-layout-spacer.mdl-cell--hide-phone

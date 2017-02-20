@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="finalloginsignup.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        
+  </head>
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 100px;
+padding:10px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+#article1 {
+    margin: 60px;
+    width: 1200px;
+    padding:0px;
+    margin-top: 300px;
+    margin-left: 80px;
+}
+
+.message {
+  font-family: "Roboto", sans-serif;
+  /*padding: 15px;*/
+  padding-bottom: 25px;
+  /*margin-bottom: 45px;*/
+}
+
+.message>strong {
+    color: red;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #5D6D7E;
+  background: -webkit-linear-gradient(right,##5D6D7E);
+  background: -moz-linear-gradient(right,##5D6D7E);
+  background: -o-linear-gradient(right,##5D6D7E);
+  background: linear-gradient(to left,#5D6D7E);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#headershubham{
+    background-color: white;
+    
+}
+
+#heading {
+    color: deepskyblue;
+    font-family: cursive 10px;
+    font-size: 30px;
+
+    font-weight: 400;
+  
+}
+
+.footer-social { float: center; margin-top:5px;}
+.footer-social li { display: inline;}
+.footer-social span { margin-top: -20px;}
+</style>
+  <body>  
+      <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout">
+  <header class="mdl-layout__header" id="headershubham">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+        <h1><span id="heading" class="mdl-layout-title">QAnserd</span></h1>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      
+    </div>
+  </header>
+ 
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here -->  
+    <div class="login-page">
+      <div class="form">
+          <div class="message">
+            <strong>
+            </strong>
+          </div>
+        <form method="POST" action="signup" id="signup" class="register-form">
+          <input name="uname" type="text" placeholder="username"/>
+          <input name="upass" type="password" placeholder="password"/>
+          <input name="email" type="text" placeholder="email"/>
+          <input name="name" type="text" placeholder="Full name"/>
+          <input name="roll_no" type="text" placeholder="Roll No"/>
+          <input name="branch" type="text" placeholder="Branch"/>
+          <button>create</button>
+          <p class="message">Already registered? 
+            <a onclick="openLoginForm()" href="#">
+              Sign In
+            </a>
+          </p>
+        </form>
+        <form type="POST", method="POST" id="login" action="login" class="login-form">
+          <input name="uname" type="text" placeholder="username"/>
+          <input name="upass" type="password" placeholder="password"/>
+          <button>login</button>
+          <p class="message">Not registered? 
+            <a onclick="openSignupForm()" href="#">
+              Create an account
+            </a>
+          </p>
+        </form>
+      </div>
+    </div>
+      </div>
+  <div id="article1" class="demo-card-wide mdl-card mdl-shadow--4dp">
+      <div class="mdl-card__title">
+        <h1 class="mdl-card__title-text" style="color: skyblue"><b>Welcome</b></h1>
+      </div>
+      <div class="mdl-card__supporting-text"><h5>
+             QAnserd is a question-and-answer site where questions are asked, answered, edited and organized by its community of users. The company was founded in Feb 2017, and the website will be made available to the public soon. Users can collaborate by editing questions and suggesting edits to other users' answers.
+             QAnserd was founded by team UTKARSH.
+            
+          </h5>
+           <p>
+          <h5>
+              QAnserd’s mission is to share and grow the world’s knowledge. A vast amount of the knowledge that would be valuable to many people is currently only available to a few — either locked in people’s heads, or only accessible to select groups. We want to connect the people who have knowledge to the people who need it, to bring together people with different perspectives so they can understand each other better, and to empower everyone to share their knowledge for the benefit of the rest of the world.
+          </h5></p>
+    </div>
+      <div class="mdl-card__actions mdl-card--border">
+      </div>
+      <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
+  </div>
+</div>
+      
+    </main>
+</div>
+      
+      
+      
+   <script>
+      var loginForm = document.getElementById('login');
+      var signupForm = document.getElementById('signup');
+      
+      function openSignupForm() {
+        loginForm.style.display = "none";
+        signupForm.style.display = "block";
+      }
+      function openLoginForm() {
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+      }
+    </script>
+    <link rel="stylesheet" href="footercss.css">
+            <footer class="page__footer">
+
+    <div class="footer-social">
+    <span>Connect with us:</span>
+    <li><a href="https://www.facebook.com/QAnserd-757309487758971/">
+        <img src='http://www.womenactionmedia.org/cms/assets/themes/crate/images/social/facebook.png' />
+    </a></li>
+<li><a href="https://github.com/Hackathon376/">
+    <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAYFBMVEX///8XFRXw8PAhICD4+Pj7+/vn5+eioqJjY2PR0dEgHh7u7u49PT1fXl46OTnOzs41NDQmJSV7e3utq6tubm5zc3MbGhqVlJSKiopKSkpWVlbBwcHZ2dloZmYuLi6TkpJHI1OrAAABPklEQVQ4jXVS2baDIAwMuIALitWqaGv//y8vJOgR8OZBkJkhyRCAKxrxbWvG6vYrGkijkuwWsopgPrEoJh7IdYwzpm+X7FmKM5btJ94/4pbR+/yH/elUwMpUZ78H1YH1jZCLwbZojG11EDmMWCkmQImriH/oyo8TVnjskqhrFwTpFEBJSceYMNJ5CQLXIzG3ORAQIP2aBCkldLjylMAR6GDGDCkOgDlmIN+fCPQ+RKifCDURat9NEqWXts82nEa09BKsLWK8IOV0OvaKCa/TYT7TTgZllH5CZ2vQ28p3Y/dS9Jio6IXyKvZ2ZPuz5Ma/nQt1zc2M167utUvnmx/C/SKsVK9Vb8DFuvtWmhM3/qC0pi63CrnH9VW3Y5if+OUBQd/6arb7oxNhC2fIjnRAGJIR4osefIp80MvDBP0Tf+zPC+5F2aFWAAAAAElFTkSuQmCC'/>
+</a></li>
+                </body>
+      </html>

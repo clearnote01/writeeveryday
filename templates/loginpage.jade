@@ -1,0 +1,40 @@
+extends base
+
+block pagestyle
+    link(rel="stylesheet", href="/static/css/loginpage.css")
+
+block title
+    title Login page
+
+block nav
+    a.mdl-navigation__link(href="/welcome")
+        button.mdl-button.mdl-button.mdl-js-button.mdl-button--raised Logout
+
+block body 
+    div.mdl-grid
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        div#flashedmessage {{ messages[0] }}
+        {% endif %}
+        {% endwith %}
+        div#signupScreen
+            span Already Already have an account? Please 
+            a#openLogin(href="#") Login
+            form#signup(method="POST", action="/auth_signup")
+                input(name="username", placeholder="Username")
+                input(name="email", placeholder="Email ID")
+                input(name="password", placeholder="Password")
+                input(name="password_C", placeholder="Confirm Password")
+                button.mdl-button.mdl-js-button.mdl-button--raised Submit
+        div#loginScreen
+            span New New User? Please 
+            a#openSignup(href="#") Sign Up
+            span first
+            form#login(method="POST", action="/auth_login")
+                input(name="username", placeholder="Username")
+                input(name="password", placeholder="Password")
+                button.mdl-button.mdl-js-button.mdl-button--raised Submit
+
+block javascript
+    script(src="/static/js/loginpage.js")
+
