@@ -30,4 +30,5 @@ body {
               height: 70vh;
               max-width: 100%;
               font-size: 1em;
-              color: green; }
+              color: #999999;
+              font-weight: 500; }
