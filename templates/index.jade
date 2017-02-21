@@ -12,9 +12,6 @@ block title
     title Welcome back
 
 block nav
-    a.mdl-navigation__link
-        button.mdl-button.mdl-button.mdl-js-button.mdl-button--raised
-            span#noOfWords 0 words
     a.mdl-navigation__link(href="/save")
         button#saveButton.mdl-button.mdl-button.mdl-js-button.mdl-button--raised Save
 
@@ -37,8 +34,9 @@ block body
         div.mdl-cell.mdl-cell--10-col.mdl-cell--12-col-phone.all-contents.mdl-shadow--2dp
             div.mdl-textfield.mdl-js-textfield.mdl-shadow--1dp
                 //-span#noOfWords 10 words
-                hr
                 textarea#textarea.mdl-textfield__input(type="text",id="sample5",placeholder="Start writing here...")
+                hr
+                span#noOfWords 0 words
                 //-label.mdl-textfield__label(for="sample5") Write Stuffs
             h5 Welcome back {{ g.user.username }}
         div.mdl-layout-spacer.mdl-cell--hide-phone

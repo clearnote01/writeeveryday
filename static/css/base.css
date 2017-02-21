@@ -31,7 +31,8 @@ div.mdl-layout {
     div.mdl-layout .mdl-layout__drawer-button {
       margin-top: 20px; }
       div.mdl-layout header {
-        margin-bottom: 20px; }
+        border-bottom: 1px solid #101014;
+        margin-bottom: 5px; }
         div.mdl-layout header .mdl-layout__header-row {
           background-color: black; }
           div.mdl-layout header .mdl-layout__header-row nav button {
