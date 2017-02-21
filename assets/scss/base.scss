@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    background: black;
 }
 #title {
     font-size: 2em;
@@ -15,6 +16,7 @@ body, html {
     width: 100%;
     .mdl-card {
         width: 100%;
+        background-color: black;
         height: 100%;
         .mdl-grid {
             height: 100%;
@@ -30,6 +32,10 @@ div.mdl-layout {
     width: 100%;
     max-width: 100%;
     overflow-y: auto;
+    .mdl-layout__drawer {
+        background-color: black;
+        color: white;
+    }
     .mdl-layout__drawer-button {
         margin-top: 20px;
     }
@@ -38,7 +44,7 @@ div.mdl-layout {
         .mdl-layout__header-row {
             //background: rgba(0.3,0.4,0.3,0.8);
             //background: gray;
-            background: #607D7B;
+            background-color: black;
             //color: white;
             nav {
                 a.mdl-navigation__link {
@@ -59,7 +65,7 @@ div.mdl-layout {
         height: 100%;
         footer {
             margin-top: 40px;
-            background: #607D7B;
+            background: black;
         }
     }
 }

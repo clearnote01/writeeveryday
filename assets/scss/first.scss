@@ -8,7 +8,7 @@
         #test {
             padding-top: 50px;
             margin: 0px;
-            background-color: white;
+            background-color: black;
             p {
                 width: 100%;
                 padding: 0px;
@@ -16,20 +16,23 @@
         }
         .mdl-card {
             width: 100%;
+            background-color: black;
+            color: white;
             .mdl-card__title {
                 h3 {
+                    color: white;
                 }
             }
             .mdl-card__supporting-text {
                 p {
                     font-family: 'Roboto', sans-serif;
                     font-weight: 400;
-                    font-size: 1.2em;
+                    font-size: 1.1em;
+                    color: white;
                 }
             }
         }
         #first-card {
-            background-color: #607D7B;
             .mdl-card__title {
                 margin: auto;
                 h2 {

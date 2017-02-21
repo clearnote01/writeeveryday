@@ -31,23 +31,25 @@ html(lang="en")
                     div.mdl-cell
                         div(id="p2",class="mdl-progress mdl-js-progress mdl-progress__indeterminate")
                     div.mdl-layout-spacer
-        div.mdl-layout.mdl-js-layout#thePage
+        div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header#thePage
             header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header--scroll
                 div.mdl-layout__header-row
                     a(href="/").mdl-navigation__link
-                        span.mdl-layout-title 300words
+                        block titleHere 
+                            span.mdl-layout-title 300words
                     div.mdl-layout-spacer
                     nav.mdl-navigation
                         block nav
             div.mdl-layout__drawer
-                span.mdl-layout-title Title
-                nav.mdl-navigation
-                    a.mdl-navigation__link(href="#") About Us
-                    a.mdl-navigation__link(href="#")   Why us?
-                    a.mdl-navigation__link(href="#")   Help
-                div.mdl-layout-spacer
-                nav.mdl-navigation
-                    a.mdl-navigation__link(href="#")   Logout
+                block drawer
+                    span.mdl-layout-title 500words
+                    nav.mdl-navigation
+                        a.mdl-navigation__link(href="#") About Us
+                        a.mdl-navigation__link(href="#")   Why us?
+                        a.mdl-navigation__link(href="#")   Help
+                    div.mdl-layout-spacer
+                    nav.mdl-navigation
+                        a.mdl-navigation__link(href="/logout")   Logout
             
             main.mdl-layout__content
                 block body
