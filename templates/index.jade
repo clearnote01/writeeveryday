@@ -30,9 +30,11 @@ block titleHere
         span Day 
         span#noOfDay {{ g.user.day }}
     a.mdl-navigation__link(href="#")
-        span#leftDay <
+        button.daySwitch
+            span#leftDay <
     a.mdl-navigation__link(href="#")
-        span#rightDay >
+        button.daySwitch
+            span#rightDay >
 
 block body
     div.mdl-grid

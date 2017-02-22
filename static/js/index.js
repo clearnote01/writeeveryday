@@ -34,6 +34,7 @@ textarea.addEventListener('keydown', function(e) {
 let day = daySpan.innerText;
 day = day.trim();
 const maxDay = day;
+console.log(day);
 function loadDayPost(day, callback) {
   xreq = new XMLHttpRequest();
   xreq.open('GET', '/post/'+day, true);
@@ -57,6 +58,9 @@ function loadDayPost(day, callback) {
 if (day!==undefined) {
   loadDayPost(day);
 }
+else {
+  console.log('what the fuck... day is defined')
+}
 
 // Button click left or right
 leftDayButton.addEventListener('click', function() {
@@ -65,7 +69,7 @@ leftDayButton.addEventListener('click', function() {
 		leftDayButton.style.color = "yellow";
 		loadDayPost(day, function() {
 			setTimeout(function() {
-				leftDayButton.style.color = "green";
+				leftDayButton.style.color = "white";
 			}, 300);
 		});
 	}
@@ -76,7 +80,7 @@ rightDayButton.addEventListener('click', function() {
 		rightDayButton.style.color = "yellow";
 		loadDayPost(day, function() {
 			setTimeout(function() {
-				rightDayButton.style.color = "green";
+				rightDayButton.style.color = "white";
 			}, 300);
 		});
 	}

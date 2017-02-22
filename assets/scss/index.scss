@@ -12,7 +12,15 @@ body {
 }
 
 #rightDay,#leftDay {
-    color: green;
+    color: white;
+}
+
+.daySwitch {
+    background-color: black;
+    border: 1px solid green;
+    border-radius: 10%;
+    padding: -5px;
+    margin: -5px;
 }
 
 .mdl-grid {
@@ -25,6 +33,7 @@ body {
     padding: 0px;
     .all-contents {
         overflow-y: hidden;
+        overflow-x: hidden;
         max-width: 100%;
         margin-left: 0px;
         padding-left: 0px;
