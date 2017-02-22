@@ -15,10 +15,25 @@ let words_l = 0
 
 console.log('This is new post page')
 
+// Fix textarea tab functionality
+textarea.addEventListener('keydown', function(e) {
+  if (e.keyCode === 9) {
+		var start = this.selectionStart;
+		var end = this.selectionEnd;
+		var target = e.target;
+		var value = target.value;
+		target.value = value.substring(0,start)+ "\t" + value.substring(end);
+		this.selectionStart = this.selectionEnd = start + 1;
+		e.preventDefault();
+	}
+}, false);
+
+
 // Ajax load page content
 //
 let day = daySpan.innerText;
-day = day.trim()
+day = day.trim();
+const maxDay = day;
 function loadDayPost(day, callback) {
   xreq = new XMLHttpRequest();
   xreq.open('GET', '/post/'+day, true);
@@ -27,7 +42,10 @@ function loadDayPost(day, callback) {
       if (xreq.status == 200) {
         console.log(this.responseText);
         textarea.value = this.responseText
-        noOfDay.innerText = day;
+        daySpan.innerText = day;
+				if(callback) {
+					callback();
+				}
       }
       else {
         alert('Prolly got some error');
@@ -42,12 +60,26 @@ if (day!==undefined) {
 
 // Button click left or right
 leftDayButton.addEventListener('click', function() {
-  day = day - 1;
-  loadDayPost(day);
+	if (day > 1) {
+		day = day - 1;
+		leftDayButton.style.color = "yellow";
+		loadDayPost(day, function() {
+			setTimeout(function() {
+				leftDayButton.style.color = "green";
+			}, 300);
+		});
+	}
 });
 rightDayButton.addEventListener('click', function() {
-  day = day + 1;
-  loadDayPost(day);
+	if (day < maxDay) {
+		day = day + 1;
+		rightDayButton.style.color = "yellow";
+		loadDayPost(day, function() {
+			setTimeout(function() {
+				rightDayButton.style.color = "green";
+			}, 300);
+		});
+	}
 });
 
 
