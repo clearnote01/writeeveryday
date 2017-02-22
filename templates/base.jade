@@ -6,12 +6,16 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport",content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
     meta(name="mobile-web-app-capable",content="yes")
+    meta(name="theme-color",content="black")
+    meta(name="msapplication-navbutton-color",content="black")
+    meta(name="apple-mobile-web-app-status-bar-style",content="black")
     block title
       title Base
     link(defer rel="stylesheet",href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet",href="/static/css/base.css")
     link(rel="stylesheet",href="/static/css/material.min.css")
     link(defer rel="stylesheet", href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700", type="text/css")
+    link(rel="icon",type="image/x-icon",href="static/images/favicon.png")
 
     //-link(rel="stylesheet",href="https://fonts.googleapis.com/icon?family=Material+Icons")
     //-link(rel="stylesheet",href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
@@ -28,16 +32,17 @@ html(lang="en")
                         div(id="p2",class="mdl-progress mdl-js-progress mdl-progress__indeterminate")
                     div.mdl-layout-spacer
         div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header#thePage
-            header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header--scroll
-                div.mdl-layout__header-row
-                    nav.mdl-navigation
-                        block nav_left_of_head
-                    a(href="/").mdl-navigation__link
-                        block titleHere 
-                            span.mdl-layout-title 300words
-                    div.mdl-layout-spacer
-                    nav.mdl-navigation
-                        block nav
+            block header
+                header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header--scroll
+                    div.mdl-layout__header-row
+                        nav.mdl-navigation
+                            block nav_left_of_head
+                        a(href="/").mdl-navigation__link
+                            block titleHere 
+                                span.mdl-layout-title 300words
+                        div.mdl-layout-spacer
+                        nav.mdl-navigation
+                            block nav
             div.mdl-layout__drawer
                 block drawer
                     span.mdl-layout-title 500words

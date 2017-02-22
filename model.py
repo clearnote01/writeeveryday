@@ -19,7 +19,7 @@ class User(db.Model):
         self.password = password
         self.email = email
         self.registered_on = datetime.utcnow()
-        self.day = 0
+        self.day = 1
  
     def is_authenticated(self):
         return True
@@ -34,7 +34,7 @@ class User(db.Model):
         return self.id
  
     def __repr__(self):
-        return '<User %r>' % (self.username)
+        return '[User {}: Day: {}]'.format(self.username, self.day)
 
 class Post(db.Model):
     __tablename__ = "posts"
@@ -52,6 +52,21 @@ class Post(db.Model):
 
     def __repr__(self):
         return '[ Post: Day: {} : {} ]'.format(self.day, self.text)
+
+class DbInfo(db.Model):
+    __tablename__ = "dbinfo"
+    id = db.Column(db.Integer, primary_key=True)
+    last_updated = db.Column(db.Integer)
+    root_name = db.Column(db.String(50))
+    root_pass = db.Column(db.String(50))
+
+    def __repr__(self):
+        return '[Database: last_updated: {} root: {}'.format(self.last_updated, self.root_name)
+
+    def __init__(self, time_here, root_u, root_p):
+        self.last_updated = time_here 
+        self.root_name = root_u
+        self.root_pass = root_p 
 
 if __name__=='__main__':
     db.create_all()

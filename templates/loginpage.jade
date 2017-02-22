@@ -10,30 +10,59 @@ block nav
     a.mdl-navigation__link(href="/welcome")
         button.mdl-button.mdl-button.mdl-js-button.mdl-button--raised Logout
 
+// The header is empty in this page
+block header
+    span
+
 block body 
     div.mdl-grid
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        div#flashedmessage {{ messages[0] }}
-        {% endif %}
-        {% endwith %}
-        div#signupScreen
-            span Already Already have an account? Please 
-            a#openLogin(href="#") Login
-            form#signup(method="POST", action="/auth_signup")
-                input(name="username", placeholder="Username")
-                input(name="email", placeholder="Email ID")
-                input(name="password", placeholder="Password")
-                input(name="password_C", placeholder="Confirm Password")
-                button.mdl-button.mdl-js-button.mdl-button--raised Submit
-        div#loginScreen
-            span New New User? Please 
-            a#openSignup(href="#") Sign Up
-            span first
-            form#login(method="POST", action="/auth_login")
-                input(name="username", placeholder="Username")
-                input(name="password", placeholder="Password")
-                button.mdl-button.mdl-js-button.mdl-button--raised Submit
+        div.mdl-layout-spacer.mdl-cell--hide-phone
+        div.mdl-cell.mdl-cell--4-col.page-content.mdl-cell--12-col-phone
+            div#loginScreen
+                div.mdl-card
+                    div.mdl-card__title
+                        h3 Log in
+                    div.mdl-card__supporting-text
+                        form#login(method="POST", action="/auth_login")
+                            div.mdl-textfield.mdl-js-textfield
+                                div.text-here
+                                    {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                    span.flash-error {{ messages[0] }}  
+                                    {% endif %}
+                                    {% endwith %}
+                                div.text-here
+                                    span New User? Please   
+                                    a.mdl-navigation__link#openSignup(href="#") Sign Up
+                                    span &nbsp;first
+                                input.mdl-textfield__input(required, name="username", placeholder="Username")
+                                input.mdl-textfield__input(required, type="password",name="password", placeholder="Password")
+                            input(type="submit",value="Submit").mdl-button.mdl-js-button.mdl-button--raised
+            div#signupScreen
+                div.mdl-card
+                    div.mdl-card__title
+                        h3 Sign Up
+                    div.mdl-card__supporting-text
+                        form#signup(method="POST", action="/auth_signup")
+                            div.mdl-textfield.mdl-js-textfield
+                                div.text-here
+                                    {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                    span.flash-error {{ messages[0] }}  
+                                    {% endif %}
+                                    {% endwith %}
+
+                                div.text-here
+                                    span Existing User? Please  
+                                    a#openLogin.mdl-navigation__link(href="#") Login
+                                    span &nbsp;first
+                                //-label(class="mdl-textfield__label" for="fname">First name</label)
+                                input.mdl-textfield__input(required,name="username", placeholder="Username")
+                                input.mdl-textfield__input(required,type="email", name="email", placeholder="Email ID")
+                                input.mdl-textfield__input(required,type="password", name="password", placeholder="Password")
+                                input.mdl-textfield__input(required,type="password", name="password_C", placeholder="Confirm Password")
+                            input(type="submit",value="Submit").mdl-button.mdl-js-button.mdl-button--raised
+        div.mdl-layout-spacer.mdl-cell--hide-phone
 
 block javascript
     script(src="/static/js/loginpage.js")
