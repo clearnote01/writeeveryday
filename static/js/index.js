@@ -1,4 +1,5 @@
 // Subject to change
+let chat = false;
 var toWriteNo = 500
 
 var textarea = document.getElementById('textarea')
@@ -31,7 +32,7 @@ textarea.addEventListener('keydown', function(e) {
 // Auto save everything
 setInterval(function() {
   saveButton.click();
-}, 15000);
+}, 30000);
 
 // Ajax load page content
 //
@@ -46,7 +47,14 @@ function loadDayPost(day, callback) {
     if (xreq.readyState == XMLHttpRequest.DONE) {
       if (xreq.status == 200) {
         console.log(this.responseText);
-        textarea.value = this.responseText
+        if (chat) {
+          newText = this.responseText;
+          textarea.value = newText;
+        }
+        else {
+          textarea.value = this.responseText
+        }
+        
         daySpan.innerText = day;
 				if(callback) {
 					callback();
@@ -90,7 +98,6 @@ rightDayButton.addEventListener('click', function() {
 	}
 });
 
-
 // Ajax save functionality
 saveButton.addEventListener('click', function() {
   postObject = {}
@@ -113,7 +120,16 @@ saveButton.addEventListener('click', function() {
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState == XMLHttpRequest.DONE) {
       //saveButton.style.backgroundColor = "green";
-      setTimeout(savingAction, 4000);
+      setTimeout(savingAction, 1000);
+      // Just for fun
+      if(chat===true) {
+        setTimeout(function() {
+          loadDayPost(day);
+          areaText.value = "";
+        }, 2000);
+      }
+      console.log('Data here')
+      console.log(httpRequest.body)
     }
   }
   //httpRequest.setRequestHeader('Content-Type', 'application/json')
@@ -143,3 +159,32 @@ function checkIfFull(words_l) {
     wordsarea.style.color = "white";
   }
 }
+
+
+let ctrlPressed = false;
+// Add keyboard functionality
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode === 17) {
+    ctrlPressed = true;
+  }
+  // Ctrl + L for load
+  if (e.keyCode === 76) {
+    if (ctrlPressed) {
+      e.preventDefault();
+      loadDayPost(day);
+    }
+  }
+  // Ctrl + S for Save
+  if (e.keyCode === 83) {
+    if (ctrlPressed) {
+      e.preventDefault()
+      saveButton.click();
+    }
+  }
+});
+    
+window.addEventListener('keyup', function(e) {
+  if (e.keyCode === 17) {
+    ctrlPressed = false;
+  }
+});
