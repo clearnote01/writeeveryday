@@ -28,6 +28,10 @@ textarea.addEventListener('keydown', function(e) {
 	}
 }, false);
 
+// Auto save everything
+setInterval(function() {
+  saveButton.click();
+}, 15000);
 
 // Ajax load page content
 //
@@ -88,8 +92,8 @@ rightDayButton.addEventListener('click', function() {
 
 
 // Ajax save functionality
-postObject = {}
 saveButton.addEventListener('click', function() {
+  postObject = {}
   saveButton.style.backgroundColor = "red";
   saveButton.innerText = "saving...";
   postText = textarea.value;
@@ -109,7 +113,7 @@ saveButton.addEventListener('click', function() {
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState == XMLHttpRequest.DONE) {
       //saveButton.style.backgroundColor = "green";
-      setTimeout(savingAction, 2000);
+      setTimeout(savingAction, 4000);
     }
   }
   //httpRequest.setRequestHeader('Content-Type', 'application/json')

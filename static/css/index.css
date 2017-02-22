@@ -18,31 +18,37 @@ body {
           padding: -5px;
           margin: -5px; }
 
-          .mdl-grid {
-            background-color: black;
-            overflow-y: hidden;
-            width: 100%;
-            max-width: 100%;
-            max-height: 100%;
-            margin: 0px;
-            padding: 0px; }
-            .mdl-grid .all-contents {
+          .mdl-layout {
+            overflow-x: hidden; }
+
+            .mdl-grid {
+              background-color: black;
               overflow-y: hidden;
               overflow-x: hidden;
+              width: 100%;
               max-width: 100%;
-              margin-left: 0px;
-              padding-left: 0px; }
-              .mdl-grid .all-contents .mdl-textfield {
-                color: gray;
-                width: 100%;
-                padding: 5px; }
-                .mdl-grid .all-contents .mdl-textfield textarea {
-                  resize: none;
-                  height: 70vh;
-                  max-width: 100%;
-                  font-size: 1em;
-                  color: #999999;
-                  font-weight: 500; }
-                  .mdl-grid .all-contents .mdl-textfield #noOfWords {
-                    font-size: 0.8em;
-                    font-weight: 100; }
+              max-height: 100%;
+              margin: 0px;
+              padding: 0px; }
+              .mdl-grid .all-contents {
+                overflow-y: hidden;
+                overflow-x: hidden;
+                max-width: 100%;
+                margin-left: 0px;
+                padding-left: 0px; }
+                .mdl-grid .all-contents .mdl-textfield {
+                  overflow-x: hidden;
+                  color: gray;
+                  width: 100%;
+                  padding: 5px; }
+                  .mdl-grid .all-contents .mdl-textfield textarea {
+                    resize: none;
+                    height: 70vh;
+                    max-width: 100%;
+                    font-size: 1em;
+                    color: #999999;
+                    font-weight: 500;
+                    overflow-x: hidden; }
+                    .mdl-grid .all-contents .mdl-textfield #noOfWords {
+                      font-size: 0.8em;
+                      font-weight: 100; }

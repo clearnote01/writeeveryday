@@ -122,6 +122,7 @@ def savePage():
     post.text = postObject["text"]
     post.words = postObject["words"]
     post.completed = postObject["completed"]
+    print(post)
     db.session.commit()
     return 'success'
     

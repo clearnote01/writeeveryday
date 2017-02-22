@@ -23,9 +23,14 @@ body {
     margin: -5px;
 }
 
+.mdl-layout {
+    overflow-x: hidden;
+}
+
 .mdl-grid {
     background-color: black;
     overflow-y: hidden;
+    overflow-x: hidden;
     width: 100%;
     max-width: 100%;
     max-height: 100%;
@@ -38,6 +43,7 @@ body {
         margin-left: 0px;
         padding-left: 0px;
         .mdl-textfield {
+            overflow-x: hidden;
             color: gray;
             width: 100%;
             padding: 5px;
@@ -48,6 +54,7 @@ body {
                 font-size: 1.0em;
                 color: #999999;
                 font-weight: 500;
+                overflow-x: hidden;
             }
             #noOfWords {
                 font-size: 0.8em;
