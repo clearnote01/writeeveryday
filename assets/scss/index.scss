@@ -7,6 +7,14 @@ body {
     color: white;
 }
 
+#theDay {
+    margin: 0px;
+}
+
+#rightDay,#leftDay {
+    color: green;
+}
+
 .mdl-grid {
     background-color: black;
     overflow-y: hidden;
@@ -24,10 +32,6 @@ body {
             color: gray;
             width: 100%;
             padding: 5px;
-            #noOfWords {
-                font-size: 0.7em;
-                font-weight: 100;
-            }
             textarea {
                 resize: none;
                 height: 70vh;
@@ -35,6 +39,10 @@ body {
                 font-size: 1.0em;
                 color: #999999;
                 font-weight: 500;
+            }
+            #noOfWords {
+                font-size: 0.8em;
+                font-weight: 100;
             }
         }
     }

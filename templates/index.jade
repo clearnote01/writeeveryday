@@ -9,34 +9,38 @@ block javascript
     script(src="/static/js/index.js")
 
 block title
-    title Welcome back
+    title 500words
 
+block nav_left_of_head
 block nav
-    a.mdl-navigation__link(href="/save")
+    a.mdl-navigation__link(href="#")
         button#saveButton.mdl-button.mdl-button.mdl-js-button.mdl-button--raised Save
 
 block drawer
     span.mdl-layout-title 500words
     nav.mdl-navigation
-        a.mdl-navigation__link(href="#") About Us
-        a.mdl-navigation__link(href="#")   Why us?
-        a.mdl-navigation__link(href="#")   Help
+        a.mdl-navigation__link(href="/welcome") Homepage
+        a.mdl-navigation__link(href="#") Profile
     div.mdl-layout-spacer
     nav.mdl-navigation
         a.mdl-navigation__link(href="/logout")   Logout
 
 block titleHere
-    span#noOfDays.mdl-layout-title Day 1
+    span#theDay.mdl-layout-title 
+        span Day 
+        span#noOfDay {{ g.user.day }}
+    a.mdl-navigation__link(href="#")
+        span#leftDay <
+    a.mdl-navigation__link(href="#")
+        span#rightDay >
 
 block body
     div.mdl-grid
         div.mdl-layout-spacer.mdl-cell--hide-phone
         div.mdl-cell.mdl-cell--10-col.mdl-cell--12-col-phone.all-contents.mdl-shadow--2dp
             div.mdl-textfield.mdl-js-textfield.mdl-shadow--1dp
-                //-span#noOfWords 10 words
                 textarea#textarea.mdl-textfield__input(type="text",id="sample5",placeholder="Start writing here...")
                 hr
                 span#noOfWords 0 words
-                //-label.mdl-textfield__label(for="sample5") Write Stuffs
             h5 Welcome back {{ g.user.username }}
         div.mdl-layout-spacer.mdl-cell--hide-phone

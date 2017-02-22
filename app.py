@@ -2,8 +2,9 @@ from flask import Flask, render_template, redirect, url_for, request, flash, ses
 from flask_scss import Scss
 from flask_sqlalchemy import SQLAlchemy
 from rdb import db
-from model import User
+from model import User, Post
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+import json
 
 # Initialize app
 app = Flask(__name__)
@@ -33,8 +34,44 @@ def homepage():
         return redirect(url_for('firstpage'))
     user = None
     print(g.user)
-    return render_template('index.jade', user = user)
+    return render_template('index.jade', user = g.user)
 
+# simulate effect of posting on next day
+@app.route('/nextday')
+def next_day():
+    g.user.day += 1
+    db.session.commit()
+    return 'Current day of user' + str(g.user.day)
+
+@app.route('/post/<day>')
+def view_post(day):
+    post = Post.query.filter_by(user_id=g.user.id, day=day).first()
+    print(post)
+    if post == None:
+        print('creating new post')
+        post = Post(g.user, 'Empty page', day)
+        print(post)
+        db.session.add(post)
+        db.session.commit()
+    print(day, g.user)
+    return str(post.text)
+
+@app.route('/savepost', methods=['POST'])
+def savePage():
+    print('Saving the page')
+    text = request.data
+    text = text.decode()
+    print(text)
+    postObject = json.loads(text)
+    print(postObject["text"])
+    post = Post.query.filter_by(user_id=g.user.id, day=postObject["day"]).first()
+    print('Saving data in post: ', post)
+    post.text = postObject["text"]
+    post.words = postObject["words"]
+    post.completed = postObject["completed"]
+    db.session.commit()
+    return 'success'
+    
 @app.route('/loginsignup')
 def loginsignuppage():
     return render_template('loginpage.jade')
@@ -69,6 +106,11 @@ def login():
 def create_db():
     db.create_all()
     return 'Created tables'
+
+@app.route('/api/dt')
+def destroy_db():
+    db.drop_all()
+    return 'Destroyed tables'
 
 @app.route('/auth_signup', methods=['POST'])
 def signup():

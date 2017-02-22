@@ -18,11 +18,7 @@ html(lang="en")
     script(defer src="/static/js/material.min.js")
     script(src="/static/js/base.js")
     block pagestyle
-        //-header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header--scroll
-            //-div.mdl-layout__header-row
-                //-a(href="/").mdl-navigation__link
-                    //-span.mdl-layout-title 300words
-                //-div.mdl-layout-spacer
+
     body(onload="bodyLoad()")
         div#myLoader.mdl-layout__content
             div.mdl-card
@@ -34,6 +30,8 @@ html(lang="en")
         div.mdl-layout.mdl-js-layout.mdl-layout--fixed-header#thePage
             header.mdl-layout__header.mdl-layout__header--transparent.mdl-layout__header--scroll
                 div.mdl-layout__header-row
+                    nav.mdl-navigation
+                        block nav_left_of_head
                     a(href="/").mdl-navigation__link
                         block titleHere 
                             span.mdl-layout-title 300words

@@ -31,12 +31,18 @@ div.mdl-layout {
     div.mdl-layout .mdl-layout__drawer-button {
       margin-top: 20px; }
       div.mdl-layout header {
+        padding: 0px;
         border-bottom: 1px solid #101014;
         margin-bottom: 5px; }
         div.mdl-layout header .mdl-layout__header-row {
-          background-color: black; }
-          div.mdl-layout header .mdl-layout__header-row nav button {
-            color: white; }
+          background-color: black;
+          padding-left: 45px; }
+          div.mdl-layout header .mdl-layout__header-row nav {
+            padding: 0px; }
+            div.mdl-layout header .mdl-layout__header-row nav a.mdl-navigation__link {
+              padding: 0px; }
+              div.mdl-layout header .mdl-layout__header-row nav button {
+                color: white; }
   div.mdl-layout main {
     width: 100%;
     max-width: 100%;

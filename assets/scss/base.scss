@@ -40,6 +40,8 @@ div.mdl-layout {
         margin-top: 20px;
     }
     header {
+
+        padding: 0px;
         border-bottom: 1px solid #101014;
         margin-bottom: 5px;
         .mdl-layout__header-row {
@@ -47,9 +49,12 @@ div.mdl-layout {
             //background: gray;
             background-color: black;
             //color: white;
+            padding-left: 45px;
             nav {
+                padding: 0px;
                 a.mdl-navigation__link {
                     //color: white;
+                    padding: 0px;
                 }
                 button {
                     color: white;
